@@ -1,0 +1,13 @@
+<div>
+    <article>
+        <ng-container *ngIf="selectedLocation">
+            <img [src]="selectedLocation?.photo" [style.width.px]="200">
+            <p>{{selectedLocation?.name}}</p>
+            <p>{{selectedLocation?.availableUnits}}</p>
+            <p>{{selectedLocation?.city}}, {{selectedLocation?.state}}</p>
+            <p>{{selectedLocation?.laundry ? "Has laundry" : "Does Not have laundry"}}</p>
+            <p>{{selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi"}}</p>
+        </ng-container>
+    </article>
+    <button (click)="backToHomePage()">Go Back</button>
+</div>
